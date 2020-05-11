@@ -1,5 +1,307 @@
+html {
+  font-size: 62.5%;
+}
+
 body {
-  background-color: white;
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.header {
+  min-height: 100vh;
+  position: relative;
+  background-image: url("../img/leaf.png");
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: 12.5%;
+}
+.header__image {
+  position: absolute;
+  right: 0;
+  top: 0;
+  max-width: 43.5%;
+}
+@media (max-width: 768px) {
+  .header__image {
+    display: none;
+  }
+}
+.header__nav {
+  padding-top: 2rem;
+  display: flex;
+  align-items: baseline;
+}
+.header__nav-list {
+  margin-left: 16.5%;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  padding-left: 0;
+  bottom: 1rem;
+}
+@media (max-width: 768px) {
+  .header__nav-list {
+    display: none;
+  }
+}
+.header__nav-item {
+  list-style: none;
+}
+.header__nav-item:not(:last-child) {
+  margin-right: 5rem;
+}
+.header__nav-link {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #263a41;
+  transition: all 0.2s;
+}
+.header__nav-link:hover {
+  color: #F4807E;
+}
+.header__logo {
+  max-width: 10rem;
+}
+@media (max-width: 375px) {
+  .header__logo {
+    margin: auto;
+  }
+}
+.header__content {
+  padding-top: 19rem;
+  position: relative;
+  max-width: 55.5rem;
+  z-index: 2;
+}
+@media (max-width: 1440) {
+  .header__content {
+    padding-top: 12rem;
+  }
+}
+@media (max-width: 768px) {
+  .header__content {
+    padding-top: 7rem;
+    text-align: center;
+    margin: auto;
+  }
+}
+.header__content-slogan {
+  font-family: "Rufina", Cochin, Georgia, Times, "Times New Roman", serif;
+  color: #F4807E;
+  margin-bottom: 2rem;
+  display: inline-block;
+  font-size: 1.6rem;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.header__content-main {
+  font-size: 6rem;
+  color: #263a41;
+  font-family: "Rufina", Cochin, Georgia, Times, "Times New Roman", serif;
+  font-weight: bold;
+  margin: 0 0 3rem;
+  line-height: 1.2;
+}
+@media (max-width: 768px) {
+  .header__content-main {
+    font-size: 4rem;
+  }
+}
+.header__content-desc {
+  font-size: 1.5rem;
+  color: #263a41;
+  margin-bottom: 5rem;
+  font-weight: 300;
+}
+.header__content-cta {
+  display: flex;
+  align-items: center;
+}
+.header__content-cta > a:first-child {
+  margin-right: 5rem;
+}
+@media (max-width: 375px) {
+  .header__content-cta > a:first-child {
+    margin: 0 0 2rem 0;
+  }
+}
+@media (max-width: 768px) {
+  .header__content-cta {
+    justify-content: center;
+  }
+}
+@media (max-width: 375px) {
+  .header__content-cta {
+    flex-direction: column;
+  }
+}
+
+.btn {
+  display: inline-block;
+  vertical-align: middle;
+  border: 0;
+  outline: none;
+  padding: 1.5rem 3rem;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+.btn--primary {
+  background-color: #F4807E;
+}
+.btn--rounded {
+  border-radius: 5rem;
+}
+.btn--icon i {
+  margin-left: 1rem;
+  color: inherit;
+}
+.btn:hover {
+  color: #333;
+}
+
+.btn__play-video:link, .btn__play-video:visited {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.btn__play-video > i {
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5rem;
+  background-color: #fcf5ee;
+  color: #F4807E;
+  margin-right: 10px;
+}
+.btn__play-video > span {
+  color: #555;
+  font-size: 1.4rem;
+  transition: all 0.2s;
+}
+.btn__play-video:hover > span {
+  color: #F4807E;
+}
+
+.nav--checkbox {
+  display: none;
+}
+.nav--checkbox-btn {
+  height: 4rem;
+  width: 4rem;
+  position: fixed;
+  top: 6rem;
+  right: 4.5rem;
+  border-radius: 5rem;
+  z-index: 4;
+  cursor: pointer;
+  text-align: center;
+  display: none;
+}
+@media (max-width: 768px) {
+  .nav--checkbox-btn {
+    display: block;
+  }
+}
+@media (max-width: 375px) {
+  .nav--checkbox-btn {
+    top: 12rem;
+    right: 1.5rem;
+  }
+}
+.nav--checkbox-btn__icon {
+  position: relative;
+  margin-top: 1.9rem;
+}
+.nav--checkbox-btn__icon, .nav--checkbox-btn__icon::before, .nav--checkbox-btn__icon::after {
+  width: 3rem;
+  height: 0.3rem;
+  background-color: #F4807E;
+  display: inline-block;
+}
+@media (max-width: 375px) {
+  .nav--checkbox-btn__icon, .nav--checkbox-btn__icon::before, .nav--checkbox-btn__icon::after {
+    width: 2.5rem;
+    height: 0.2rem;
+  }
+}
+.nav--checkbox-btn__icon::before, .nav--checkbox-btn__icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  transition: all 0.2s;
+}
+.nav--checkbox-btn__icon::before {
+  top: -0.8rem;
+}
+@media (max-width: 375px) {
+  .nav--checkbox-btn__icon::before {
+    top: -0.6;
+  }
+}
+.nav--checkbox-btn__icon::after {
+  top: 0.8rem;
+}
+@media (max-width: 375px) {
+  .nav--checkbox-btn__icon::after {
+    top: 0.6;
+  }
+}
+.nav--checkbox:checked + .nav--checkbox-btn .nav--checkbox-btn__icon {
+  background-color: transparent;
+}
+.nav--checkbox:checked + .nav--checkbox-btn .nav--checkbox-btn__icon::before {
+  top: 0;
+  transform: rotate(135deg);
+}
+.nav--checkbox:checked + .nav--checkbox-btn .nav--checkbox-btn__icon::after {
+  top: 0;
+  transform: rotate(-135deg);
+}
+.nav--checkbox-list {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 10rem;
+  padding-left: 0;
+  text-align: center;
+  background-color: #fcf5ee;
+  z-index: 3;
+  padding: 1.5rem 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s;
+}
+.nav--checkbox-item {
+  list-style: none;
+}
+.nav--checkbox-link {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: 1.5rem 0;
+  display: block;
+  color: #263a41;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.nav--checkbox-link:hover {
+  color: #F4807E;
+}
+.nav--checkbox:checked ~ .nav--checkbox-list {
+  opacity: 1;
+  visibility: visible;
 }
 
 /*# sourceMappingURL=main.css.map */

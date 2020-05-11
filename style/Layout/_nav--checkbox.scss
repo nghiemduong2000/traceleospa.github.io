@@ -1,0 +1,110 @@
+.nav--checkbox {
+    display: none;
+    &-btn {
+        height: 4rem;
+        width: 4rem;
+        position: fixed;
+        top: 6rem;
+        right: 4.5rem;
+        border-radius: 5rem;
+        z-index: 4;
+        cursor: pointer;
+        text-align: center;
+        display: none;
+        @include respond(tablet) {
+            display: block;
+        }
+        @include respond(phone) {
+            top: 12rem;
+            right: 1.5rem;
+        }
+        &__icon {
+            position: relative;
+            margin-top: 1.9rem;
+    
+            &,
+            &::before,
+            &::after {
+                width: 3rem;
+                height: .3rem;
+                background-color: $cl-primary;
+                display: inline-block;
+                @include respond(phone) {
+                    width: 2.5rem;
+                    height: .2rem;
+                }
+            }
+    
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                transition: all .2s;
+            }
+    
+            &::before {
+                top: -.8rem;
+                @include respond (phone) {
+                    top: -.6;
+                }
+            }
+    
+            &::after {
+                top: .8rem;
+                @include respond (phone) {
+                    top: .6;
+                }
+            }
+    
+        }
+    }
+    &:checked + &-btn &-btn__icon {
+        background-color: transparent;
+    }
+
+    &:checked + &-btn &-btn__icon::before {
+        top: 0;
+        transform: rotate(135deg);
+    }
+
+    &:checked + &-btn &-btn__icon::after {
+        top: 0;
+        transform: rotate(-135deg);
+    }
+
+    &-list {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 10rem;
+        padding-left: 0;
+        text-align: center;
+        background-color: $cl-primary-light;
+        z-index: 3;
+        padding: 1.5rem 0;
+        opacity: 0;
+        visibility: hidden;
+        transition: all .4s;
+    }
+    &-item {
+        list-style: none;
+    }
+    &-link {
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        font-weight: 500;
+        padding: 1.5rem 0;
+        display: block;
+        color: $cl-gray-dark;
+        cursor: pointer;
+        transition: all .2s;
+        &:hover {
+            color: $cl-primary;
+        }
+    }
+    &:checked ~ &-list {
+        opacity: 1;
+        visibility: visible;
+    }
+}

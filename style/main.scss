@@ -1,7 +1,6 @@
-$cl-black: black;
-$cl-grey: #333;
-$cl-white: white;
-
-body {
-    background-color: $cl-white;
-}
+@import './Abstracts/variables';
+@import './Base/base';
+@import './Layout/header';
+@import './Components/btn';
+@import './Abstracts/mixin';
+@import './Layout/nav--checkbox';

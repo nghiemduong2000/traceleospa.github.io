@@ -1,0 +1,116 @@
+@import '../Abstracts/mixin';
+
+.header {
+    min-height: 100vh;
+    position: relative;
+    background-image: url('../img/leaf.png');
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: 12.5%;
+    &__image {
+        position: absolute;
+        right:0;
+        top:0;
+        max-width: 43.5%;
+        @include respond(tablet) {
+            display: none;
+        }
+    }
+    &__nav {
+        padding-top: 2rem;
+        display: flex;
+        align-items: baseline;
+        &-list {
+            margin-left: 16.5%;
+            position: relative;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            padding-left: 0;
+            bottom: 1rem;
+            @include respond(tablet) {
+                display: none;
+            }
+        }
+        &-item {
+            list-style: none;
+            &:not(:last-child) {
+                margin-right: 5rem;
+            }
+        }
+        &-link {
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: $cl-gray-dark;
+            transition: all .2s;
+            &:hover {
+                color: $cl-primary;
+            }
+        }
+    }
+    &__logo {
+        max-width: 10rem;
+        @include respond(phone) {
+            margin: auto;
+        }
+    }
+
+    &__content {
+        padding-top: 19rem;
+        position: relative;
+        max-width: 55.5rem;
+        z-index: 2;
+        @include respond(md-desktop) {
+            padding-top: 12rem;
+        }
+        @include respond(tablet) {
+            padding-top: 7rem;
+            text-align: center;
+            margin: auto;
+        }
+        &-slogan {
+            font-family: 'Rufina', Cochin, Georgia, Times, 'Times New Roman', serif;
+            color: $cl-primary;
+            margin-bottom: 2rem;
+            display: inline-block;
+            font-size: 1.6rem;
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+        &-main {
+            font-size: 6rem;
+            color: $cl-gray-dark;
+            font-family: 'Rufina', Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-weight: bold;
+            margin:0 0 3rem;
+            line-height: 1.2;
+            @include respond (tablet) {
+                font-size: 4rem;
+            }
+        }
+        &-desc {
+            font-size: 1.5rem;
+            color: $cl-gray-dark;
+            margin-bottom: 5rem;
+            font-weight: 300;
+        }
+        &-cta {
+            display: flex;
+            align-items: center;
+            & > a:first-child {
+                margin-right: 5rem;
+                @include respond(phone) {
+                    margin: 0 0 2rem 0;
+                }
+            }
+            @include respond(tablet) {
+                justify-content: center;
+            }
+            @include respond(phone) {
+                flex-direction: column;
+            }
+        }
+    }
+}
