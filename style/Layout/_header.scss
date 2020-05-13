@@ -7,6 +7,7 @@
     background-position: left center;
     background-repeat: no-repeat;
     background-size: 12.5%;
+
     &__image {
         position: absolute;
         right:0;
@@ -66,9 +67,12 @@
             padding-top: 12rem;
         }
         @include respond(tablet) {
-            padding-top: 7rem;
+            padding-top: 28rem;
             text-align: center;
             margin: auto;
+        }
+        @include respond(phone) {
+            padding-top: 10rem;
         }
         &-slogan {
             font-family: 'Rufina', Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -78,6 +82,9 @@
             font-size: 1.6rem;
             font-weight: 400;
             text-transform: uppercase;
+            @include respond(tablet) {
+                font-size: 1.6rem;
+            }
         }
         &-main {
             font-size: 6rem;

@@ -12,8 +12,17 @@
     cursor: pointer;
     text-decoration: none;
     transition: all .2s;
+    &--gray {
+        background-color: $cl-gray-dark;
+        &:hover {
+            background-color: $cl-primary;
+        }
+    }
     &--primary {
         background-color: $cl-primary;
+        &:hover {
+            color: $cl-gray;
+        }
     }
     &--rounded {
         border-radius: 5rem;
@@ -21,9 +30,6 @@
     &--icon i {
         margin-left: 1rem;
         color: inherit;
-    }
-    &:hover {
-        color: $cl-gray;
     }
 } 
 

@@ -1,0 +1,27 @@
+.popular {
+    padding: 10rem 0;
+    &__item {
+        text-align: center;
+        border: 1px solid rgba($cl-gray-dark, .15);
+        border-radius: 1rem;
+        padding: 2rem;
+        @include respond (tablet) {
+            margin-bottom: 2rem;
+        }
+        img {
+            width: 100%;
+        }
+        &-title {
+            font-size: 2.2rem;
+            font-family: $ff-primary;
+            color: $cl-gray-dark;
+        }
+        &-desc {
+            font-size: 1.4rem;
+            font-weight: 300;
+            line-height: 3rem;
+            color: $cl-gray-dark;
+            margin-bottom: 3rem;
+        }
+    }
+}

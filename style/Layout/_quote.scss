@@ -1,0 +1,36 @@
+.quote {
+    text-align: center;
+    background-color: #FEF9F8;
+    padding: 5rem 5rem;
+    &__item {
+        width: 920px;
+        @include respond(md-desktop) {
+            width: 100%;
+        }
+    }
+    &__img {
+        margin-bottom: 5rem;
+    }
+    &__review {
+        font-size: 1.8rem;
+        font-family: $ff-primary;
+        color: $cl-gray-dark;
+        line-height: 3.5rem;
+        margin-bottom: 5rem;
+    }
+    &__customer {
+        border-radius: 50%;
+        max-width: 100%;
+        &-name {
+            font-family: $ff-primary;
+            font-size: 2.2rem;
+            color: $cl-gray-dark;
+            margin-bottom: 8rem;
+            span {
+                font-size: 1.4rem;
+                font-weight: 300;
+                font-family: "Roboto", sans-serif;
+            }
+        }
+    }
+}

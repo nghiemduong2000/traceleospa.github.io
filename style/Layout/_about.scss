@@ -1,0 +1,100 @@
+.about {
+    &__inner {
+        padding: 10rem 0;
+        position: relative;
+        @include respond(tablet) {
+            padding: 4rem 0;
+        }
+    }
+    &__flower1 {
+        position: absolute;
+        max-width: 13.5rem;
+        top: 0;
+        left: 0;
+        @include respond(phone) {
+            max-width: 11rem;
+        }
+    }
+    &__flower2 {
+        position: absolute;
+        max-width: 7rem;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
+        @include respond(phone) {
+            max-width: 5rem;
+            top: 46%;
+            right: 1rem;
+        }
+    }
+    &__content {
+        text-align: center;
+        margin: 0 auto;
+        h3 {
+            text-transform: uppercase;
+            color: $cl-gray-light;
+            font-size: 2rem;
+            font-weight: 400;
+            margin-bottom: 3rem;
+            @include respond(tablet) {
+                font-size: 1.6rem;
+            }
+        }
+    }
+    &__logo {
+        margin: 0 auto 4rem;
+        max-width: 8rem;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        flex-flow: row wrap;
+        padding: 0;
+
+    }
+    &__item {
+        max-width: 24.8%;
+        list-style: none;
+        position: relative;
+        cursor: pointer;
+        @include respond(tablet) {
+            max-width: 100%;
+            margin: auto;
+        }
+        > img {
+            max-width: 100%;;
+        }
+        &-content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba($cl-primary, .8);
+            display: flex;
+            justify-content: center;
+            flex-flow: column nowrap;
+            align-items: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all .4s;
+            img {
+                width: 6rem;
+                margin-bottom: 2.5rem;
+            }
+            span {
+                font-size: 2rem;
+                color: $cl-white;
+                font-family: 'Rufina', serif;
+                font-weight: 400;
+            }
+
+        }
+        &:hover &-content{
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+}

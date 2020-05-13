@@ -1,0 +1,102 @@
+.booking {
+    display: flex;
+    &__img {
+        flex-basis: 40%;
+        img {
+            max-width: 100%;
+        }
+        @include respond(md-desktop) {
+            display: none;
+        }
+    }
+    &__form {
+        flex-basis: 60%;
+        display: flex;
+        align-items: center;
+        background-color: #FEF9F8;
+        padding-left: 10rem;
+        @include respond(md-desktop) {
+            flex-basis: 100%;
+            padding: 8rem 10rem;
+        }
+        @include respond(tablet) {
+            flex-basis: 100%;
+            padding: 3rem 3rem;
+        }
+        @include respond(phone) {
+            flex-basis: 100%;
+            padding: 3rem 1rem;
+        }
+        form {
+            width: 65rem;
+            @include respond(md-desktop) {
+                margin: auto;
+                width: 80rem;
+            }
+            @include respond(tablet) {
+                margin: auto;
+                width: 50rem;
+            }
+            @include respond(phone) {
+                margin: auto;
+                width: 100%;
+            }
+        }
+        &-group {
+            display: flex;
+            justify-content: space-between;
+            @include respond(phone) {
+                flex-flow: column wrap;
+            }
+            > input, select {
+                width: 49%;
+                border: none;
+                border-bottom: 1px solid rgba($cl-gray-dark, .2);
+                background-color: transparent;
+                padding: 2rem 0;
+                outline: none;
+                color: rgba($cl-gray-dark, .4);
+                margin-bottom: 3rem;
+                @include respond(phone) {
+                    width: 100%;
+                }
+            }
+            textarea {
+                font-family: "Roboto", sans-serif;
+                border: none;
+                color: rgba($cl-gray-dark, .4);
+                border-bottom: 1px solid rgba($cl-gray-dark, .2);
+                background-color: transparent;
+                width: 100%;
+                height: 8rem;
+                margin-bottom: 3rem;
+                padding: 2rem 0;
+                &::-webkit-scrollbar {
+                    display: none;
+                };
+            }
+        }
+    }
+    .custom-input{
+        width: 49%;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid rgba($cl-gray-dark, .2);
+        margin-bottom: 3rem;
+        @include respond(phone) {
+            width: 100%;
+        }
+        input {
+            flex: 1;
+            padding: 2rem 0;
+            border: none;
+            background-color: transparent;
+            color: rgba($cl-gray-dark, .4);
+        }
+        i {
+            font-size: 2rem;
+            margin-right: 1rem;
+            color: rgba($cl-gray-dark, .8);
+        }
+    }
+}
