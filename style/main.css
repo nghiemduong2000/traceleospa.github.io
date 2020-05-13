@@ -646,7 +646,7 @@ body {
 @media (max-width: 414px) {
   .booking__form {
     flex-basis: 100%;
-    padding: 3rem 1rem;
+    padding: 3rem 3rem;
   }
 }
 .booking__form form {
@@ -668,6 +668,7 @@ body {
   .booking__form form {
     margin: auto;
     width: 100%;
+    text-align: center;
   }
 }
 .booking__form-group {
@@ -731,6 +732,129 @@ body {
   font-size: 2rem;
   margin-right: 1rem;
   color: rgba(38, 58, 65, 0.8);
+}
+
+.contact {
+  padding: 5rem;
+}
+.contact__info {
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 414px) {
+  .contact__info {
+    align-items: left;
+    margin-bottom: 3rem;
+  }
+}
+.contact__item {
+  display: flex;
+}
+.contact__item .icon {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  position: relative;
+  background-color: #F4807E;
+  margin-right: 2rem;
+}
+.contact__item .icon i {
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 1.4rem;
+  transform: translate(-50%, -50%);
+}
+.contact__item .text {
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: rgba(38, 58, 65, 0.8);
+}
+.contact__comment form {
+  display: flex;
+  flex-direction: column;
+}
+.contact__comment form input, .contact__comment form textarea {
+  padding: 2rem;
+  margin-bottom: 2rem;
+  font-size: 1.4rem;
+  border: 1px solid rgba(38, 58, 65, 0.2);
+}
+.contact__comment form textarea {
+  height: 8rem;
+  font-family: "Roboto", sans-serif;
+}
+.contact__comment form button {
+  width: 40%;
+}
+@media (max-width: 768px) {
+  .contact__comment form button {
+    width: 20rem;
+    margin: 0 auto;
+  }
+}
+
+.footer {
+  text-align: center;
+  background-color: #FEF9F8;
+  padding: 8rem 2rem;
+}
+.footer__menu-list {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 4rem 0;
+}
+@media (max-width: 414px) {
+  .footer__menu-list {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.footer__menu-item {
+  list-style: none;
+}
+@media (max-width: 414px) {
+  .footer__menu-item {
+    margin-bottom: 2rem;
+  }
+}
+.footer__menu-link {
+  text-transform: uppercase;
+  color: #263a41;
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 0 2.5rem;
+}
+.footer__social-list {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin-bottom: 4rem;
+}
+.footer__social-item {
+  list-style: none;
+}
+.footer__social-item:not(:last-child) {
+  border-right: 1px solid #263a41;
+}
+.footer__social-link {
+  padding: 0 1rem;
+}
+.footer__social-link i {
+  font-size: 1.4rem;
+  color: #263a41;
+}
+.footer__copyright {
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: #555;
+}
+.footer__copyright a {
+  text-decoration: none;
+  color: #F4807E;
 }
 
 /*# sourceMappingURL=main.css.map */

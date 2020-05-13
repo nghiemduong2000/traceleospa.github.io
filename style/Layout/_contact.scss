@@ -1,0 +1,62 @@
+.contact {
+    padding: 5rem;
+    &__info {
+        display: flex;
+        flex-direction: column;
+        @include respond(phone) {
+            align-items: left;
+            margin-bottom: 3rem;
+        }
+    }
+
+    &__item {
+        display: flex;
+
+        .icon {
+            width: 5rem;
+            height: 5rem;
+            border-radius: 50%;
+            position: relative;
+            background-color: $cl-primary;
+            margin-right: 2rem;
+            i {
+                color: $cl-white;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                font-size: 1.4rem;
+                transform: translate(-50%, -50%);
+            }
+        }
+        .text {
+            font-size: 1.4rem;
+            font-weight: 300;
+            color: rgba($cl-gray-dark, .8)
+        }
+    }
+
+    &__comment {
+        form {
+            display: flex;
+            flex-direction: column;
+            input,textarea {
+                padding: 2rem;
+                margin-bottom: 2rem;
+                font-size: 1.4rem;
+                border: 1px solid rgba($cl-gray-dark, .2);
+            }
+            textarea {
+                height: 8rem;
+                font-family: 'Roboto', sans-serif;
+            }
+            button {
+                width: 40%;
+                @include respond(tablet) {
+                    width: 20rem;
+                    margin: 0 auto;
+                }
+            }
+            
+        }
+    }
+}
