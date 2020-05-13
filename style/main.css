@@ -306,6 +306,7 @@ body {
 .nav--checkbox-link {
   font-size: 1.4rem;
   text-transform: uppercase;
+  text-decoration: none;
   font-weight: 500;
   padding: 1.5rem 0;
   display: block;
